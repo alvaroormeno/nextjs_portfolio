@@ -5,6 +5,7 @@ import { Resend } from "resend";
 // import { validateString, getErrorMessage } from "@/lib/utils";
 // import ContactFormEmail from "@/email/contact-form-email";
 import { validateString, getErrorMessage } from "./validations";
+import ContactFormEmail from "../emails/ContactFormEmail";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -17,12 +18,12 @@ export const sendEmail = async (formData: FormData) => {
  
     if (!validateString(senderEmail, 500)) {
         return {
-        error: "Invalid sender email",
+            error: "Invalid sender email",
         };
     }
     if (!validateString(message, 5000)) {
         return {
-        error: "Invalid message",
+            error: "Invalid message",
         };
     }
 
@@ -33,19 +34,18 @@ export const sendEmail = async (formData: FormData) => {
                 from: "Contact Form <onboarding@resend.dev>",
                 to: "alvaro@ormeno.org",
                 subject: "Message from portfolio contact form",
-                text: message,
                 reply_to: senderEmail,
-                // react: React.createElement(ContactFormEmail, {
-                //     message: message,
-                //     senderEmail: senderEmail,
-                // }),
+                react: React.createElement(ContactFormEmail, {
+                    message: message,
+                    senderEmail: senderEmail,
+                }),
             });
         }
         
     } catch (error: unknown) {
-        // return {
-        // error: getErrorMessage(error),
-        // };
+        return {
+            error: getErrorMessage(error),
+        };
     }
 
     return {
