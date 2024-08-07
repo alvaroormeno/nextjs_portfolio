@@ -7,6 +7,9 @@ const nextConfig = {
                 hostname: 'static.vecteezy.com'
             }
         ]
+    },
+    experimental: {
+        serverActions: true
     }
 };
 

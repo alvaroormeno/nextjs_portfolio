@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, {useEffect} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -8,10 +8,30 @@ import { BsArrowRight } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
 import { BsLinkedin } from 'react-icons/bs'
 import { FaGithubSquare } from 'react-icons/fa'
+import { useInView } from 'react-intersection-observer'
+import { useActiveSectionContext } from '../contexts/ActiveSectionContext'
 
 export default function IntroSection() {
+
+    const {ref, inView } = useInView({
+        threshold: 0.5
+    })
+
+    const { 
+        activeSection, 
+        setActiveSection, 
+        setTimeOfLastClick 
+    } = useActiveSectionContext();
+
+    useEffect(() => {
+        if (inView) {
+            setActiveSection('Home')
+        }
+    }, [inView, setActiveSection])
+
+
   return (
-    <section className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
+    <section className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]" id='home'ref={ref}>
         <div className='flex items-center justify-center'>
             <div className='relative'>
                 <motion.div
@@ -72,6 +92,10 @@ export default function IntroSection() {
             <Link
                 href={'#contact'}
                 className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+                onClick={() => {
+                    setActiveSection('Contact')
+                    setTimeOfLastClick(Date.now())
+                }}
             >
                 Contact me here <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition'/>
             </Link>
