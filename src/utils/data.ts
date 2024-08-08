@@ -35,26 +35,27 @@ export const links = [
 
 export const experiencesData = [
     {
-        title: "Graduated bootcamp",
-        location: "Miami, FL",
+        title: "Columbia University Software Engineering Bootcamp",
+        location: "New York, NY",
         description:
-        "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+        // "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+        "Attended 8 month bootcamp and graduated with a new set of tools to reinforce my web development skills",
         icon: React.createElement(LuGraduationCap),
-        date: "2019",
+        date: "2021",
     },
     {
-        title: "Front-End Developer",
-        location: "Orlando, FL",
+        title: "Bootcamp Teacher Assistant",
+        location: "University of Arizona",
         description:
-        "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+        "Assisted in delivering lectures and hands-on coding class sessions on full stack web development technologies and frameworks including HTML, CSS, JS, React, Node.js, SQL, MongoDB.",
         icon: React.createElement(CgWorkAlt),
         date: "2019 - 2021",
     },
     {
-        title: "Full-Stack Developer",
-        location: "Houston, TX",
+        title: "Junior Full-Stack Developer",
+        location: "Integrated Media Services",
         description:
-        "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+        "Collaborated with a cross functional team implementing agile method to maintain and develop 5 custom high traffic web applications for education and shopping purposes for the health sector.",
         icon: React.createElement(FaReact),
         date: "2021 - present",
     },
