@@ -7,7 +7,7 @@ function Footer() {
                 &copy; 2024 Alvaro Ormeno. All rights reserved.
             </small>
             <p className="text-xs">
-                <span className="font-semibold">About this website:</span> built with
+                Built with
                 React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS,
                 Framer Motion, React Email & Resend, Vercel hosting.
             </p>
