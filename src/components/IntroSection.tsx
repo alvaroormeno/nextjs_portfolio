@@ -11,6 +11,8 @@ import { FaGithubSquare } from 'react-icons/fa'
 import { useInView } from 'react-intersection-observer'
 import { useActiveSectionContext } from '../contexts/ActiveSectionContext'
 
+import myself from "@/public/images/myself.jpg"
+
 export default function IntroSection() {
 
     const {ref, inView } = useInView({
@@ -43,7 +45,7 @@ export default function IntroSection() {
                     }}
                 >
                     <Image 
-                        src={'https://static.vecteezy.com/system/resources/thumbnails/004/511/281/small/default-avatar-photo-placeholder-profile-picture-vector.jpg'} 
+                        src={myself} 
                         alt='alvaro' 
                         width={200} 
                         height={200} 
@@ -109,7 +111,7 @@ export default function IntroSection() {
 
             <a
                 className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60'
-                href='https://linkedin.com'
+                href='https://www.linkedin.com/in/alvaroormeno'
                 target='_blank'
             >
                 <BsLinkedin/>
@@ -117,6 +119,8 @@ export default function IntroSection() {
 
             <a
                 className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+                href='https://www.github.com/alvaroormeno'
+                target='_blank'
             >
                 <FaGithubSquare/>
             </a>
