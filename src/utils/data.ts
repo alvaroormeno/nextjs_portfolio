@@ -124,7 +124,11 @@ export const workProjectsData = [
     {
         title: "DentalXP",
         description: "Leading provider of online dental education, offering a wide range of courses and programs to dental professionals worldwide.",
-        bullets: [],
+        bullets: [
+            'Redeveloped and redesigned platform from scratch enhancing design, performance, scalability for larger user and education material base',
+            'Implemented new payment processor architecture while migrating old accounts.',
+            'Developed fellowship section to offer online CE courses through videos, lectures, quizzes and final exams.'
+        ],
         tags: ["React", "Next.JS", "TypeScript", "CSS", "Prisma", "Stripe", "SendGrid"],
         imageUrl: dentalxpImg,
         liveDemo: 'https://www.dentalxp.com',
@@ -133,7 +137,10 @@ export const workProjectsData = [
     {
         title: "IMS Content Management System",
         description:  "Full Content Management System for all IMS platforms, DXP, DPS, DL",
-        bullets: [],
+        bullets: [
+            'Implemented new content management section for DentalXP',
+            'Updated application for all platform new needs',
+        ],
         tags: ["React", "Next.JS", "CSS", "MUI", "Redux", "Axios", "JWT", ],
         imageUrl: imsCmsImg,
         liveDemo: '',
@@ -142,7 +149,11 @@ export const workProjectsData = [
     {
         title: "Dental Product Shopper",
         description:  "Leading provider of practical, unbiased product information. Our peer to peer product reviews help you select the best products for your practice.",
-        bullets: [],
+        bullets: [
+            'Tested and analyzed communication between client and server to efficiently improve loading times.',
+            'Implemented additional informative sections such as forums and newsfeed.',
+            'Maintained content management system with new additions.'
+        ],
         tags: ["React", "Next.JS", "CSS", "Redux", "Axios",  ],
         imageUrl: dpsImage,
         liveDemo: 'https://www.dentalproductshopper.com',
@@ -151,7 +162,10 @@ export const workProjectsData = [
     {
         title: "Dental Learning",
         description:  "Leading provider of practical, unbiased product information. Our peer to peer product reviews help you select the best products for your practice.",
-        bullets: [],
+        bullets: [
+            'Implemented additional blog, webinars sections to both client and content management system',
+            'Updated mobile rendering using pure CSS.'
+        ],
         tags: ["React", "Next.JS", "CSS", "Redux", "Axios",  ],
         imageUrl: dentalLearningImg,
         liveDemo: 'https://www.dentallearning.net/',
@@ -185,5 +199,5 @@ export const skillsData = [
     "MUI",
     "JWT",
     "Axios",
-    
+
 ] as const;

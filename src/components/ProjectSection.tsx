@@ -39,7 +39,7 @@ function ProjectSection() {
         >
             <SectionHeader>Projects</SectionHeader>
 
-            <div className="flex justify-center items-center gap-5 max-w-[48rem] mb-5">
+            <div className="flex justify-center items-center gap-5 max-w-[52rem] mb-5">
                 <p 
                     className={projectType === 'workProjects' ? "bg-black/[0.7] px-3 py-1 text-[0.9rem] uppercase tracking-wider text-white rounded-full dark:text-white/70 cursor-pointer " : "text-[0.9rem] uppercase tracking-wider cursor-pointer"}
                     onClick={() => setProjectType('workProjects')}
