@@ -13,6 +13,7 @@ import dentalxpImg from "@/public/images/dentalXP.png"
 import dpsImage from "@/public/images/dentalProductShopper.png"
 import dentalLearningImg from "@/public/images/dentalLearning.png"
 import imsCmsImg from "@/public/images/imsContentManagement.png"
+import quickExpense from "@/public/images/quickExpenseTracker.png"
 
 export const links = [
     {
@@ -67,31 +68,17 @@ export const experiencesData = [
 
 export const fullstackProjectsData = [
     {
-        title: "CorpComment",
-        description: "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-        bullets: [],
-        tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-        imageUrl: corpcommentImg,
-        liveDemo: '',
-        githubRepo:''
-    },
-    {
-        title: "rmtDev",
-        description: "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-        bullets: [],
-        tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-        imageUrl: rmtdevImg,
-        liveDemo: '',
-        githubRepo:''
-    },
-    {
-        title: "Word Analytics",
-        description: "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-        bullets: [],
-        tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-        imageUrl: wordanalyticsImg,
-        liveDemo: '',
-        githubRepo:''
+        title: "Quick Expense Tracker",
+        description: "An easy and quick expense tracker for any budget",
+        bullets: [
+            'Use of new Next.Js server side actions',
+            'Hosting Postgress Database on Neon',
+            'Authentication and login for each user'
+        ],
+        tags: ["React", "Next.js", "CSS", "Prisma", "PostgreSQL", "Neon", "Vercel", "Clerk"],
+        imageUrl: quickExpense,
+        liveDemo: 'https://nextjs-quick-expense-tracker.vercel.app/',
+        githubRepo:'https://github.com/alvaroormeno/nextjs-expense-tracker'
     },
 ] 
 
