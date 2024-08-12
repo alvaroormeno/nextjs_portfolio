@@ -34,8 +34,8 @@ export default function Project({
             }}
             className="group mb-3 sm:mb-8 last:mb-0"
         >
-        <section className="bg-gray-100 max-w-[52rem] border border-black/5 rounded-lg overflow-hidden relative sm:min-h-[20rem] hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-            <div className="py-6 px-6 gap-2  sm:max-w-[60%] flex flex-col h-full  sm:min-h-[20rem] sm:group-even:ml-[auto]">
+        <section className="bg-gray-100 max-w-[52rem] border border-black/5 rounded-lg overflow-hidden relative sm:min-h-[16rem] hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
+            <div className="py-6 px-6 gap-2  sm:max-w-[60%] flex flex-col h-full  sm:min-h-[16rem] sm:group-even:ml-[auto]">
                 <h3 className="text-2xl font-semibold">{title}</h3>
                 <p className=" leading-relaxed text-gray-700 dark:text-white/70">
                     {description}

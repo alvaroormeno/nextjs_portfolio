@@ -1,10 +1,8 @@
 import React from "react";
+
+// ICONS
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-
-
-
 // IMAGES
 import udemyClone from "@/public/images/udemyclone.png"
 import frontendChallenge1 from "@/public/images/frontEndChallenge1.png"
