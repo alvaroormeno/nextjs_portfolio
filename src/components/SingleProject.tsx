@@ -6,6 +6,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 import handleGAClicks from '../utils/GoogleAnalytics/eventClicks'
 
+import styles from "@/src/styles/IntroSection/IntroSection.module.css";
+
 export default function Project({
     title,
     description,
