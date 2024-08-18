@@ -11,8 +11,10 @@
   "dependencies": {
     "@react-email/components": "^0.0.22",
     "@react-email/tailwind": "^0.0.19",
+    "axios": "^1.7.3",
     "framer-motion": "^11.3.21",
     "next": "14.2.5",
+    "node-fetch": "^3.3.2",
     "react": "^18",
     "react-dom": "^18",
     "react-hot-toast": "^2.4.1",

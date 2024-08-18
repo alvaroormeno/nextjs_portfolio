@@ -8,12 +8,15 @@ import { useActiveSectionContext } from "../contexts/ActiveSectionContext";
 
 import { useSectionInView } from "../utils/hooks";
 
+const axios = require('axios');
+
 
 function AboutSection() {
 
     const { ref } = useSectionInView("About");
-
     
+
+
 
   return (
     <motion.section
