@@ -32,6 +32,20 @@ export default function IntroSection() {
     }, [inView, setActiveSection])
 
 
+    const handleClicks = (clickAction: string) => {
+
+        let event_category = clickAction === 'cv_download' ? 'CV Download' : clickAction === 'linkedin_redirect' ? 'LinkedIn Redirect' : 'GitHub Redirect';
+
+        let value = clickAction === 'cv_download' ? 'cv' : clickAction === 'linkedin_redirect' ? 'linkedin' : 'github';
+
+        (window as any).gtag('event', clickAction, {
+            event_category: event_category,
+            event_label: 'Click on Intro Section',
+            value: value,
+        });
+    }
+
+
   return (
     <section className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]" id='home'ref={ref}>
         <div className='flex items-center justify-center'>
@@ -105,6 +119,7 @@ export default function IntroSection() {
                 className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
                 href='/pdfs/aoz_cv_24.pdf'
                 download={true}
+                onClick={() => {handleClicks('cv_download')}}
             >
                 Download CV <HiDownload className='opacity-60 group-hover:translate-y-1 transition'/>
             </a>
@@ -113,6 +128,7 @@ export default function IntroSection() {
                 className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60'
                 href='https://www.linkedin.com/in/alvaroormeno'
                 target='_blank'
+                onClick={() => {handleClicks('linkedin_redirect')}}
             >
                 <BsLinkedin/>
             </a>
@@ -121,6 +137,7 @@ export default function IntroSection() {
                 className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
                 href='https://www.github.com/alvaroormeno'
                 target='_blank'
+                onClick={() => {handleClicks('github_redirect')}}
             >
                 <FaGithubSquare/>
             </a>

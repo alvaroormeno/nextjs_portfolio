@@ -13,9 +13,11 @@ import ThemeSwitch from "@/src/components/ThemeSwitch";
 
 const inter = Inter({ subsets: ["latin"] });
 
+import GoogleAnalytics from "@/src/components/GoogleAnalytics/GoogleAnalyticsScript";
+
 export const metadata: Metadata = {
-  title: "Alvaro | Dev Portfolio",
-  description: "Alvaro is a full-stack web developer",
+    title: "Alvaro | Dev Portfolio",
+    description: "Alvaro is a full-stack web developer",
 };
 
 export default function RootLayout({
@@ -27,12 +29,13 @@ export default function RootLayout({
         <html lang="en">
 
         <head>
+            <GoogleAnalytics />
 
   
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-H6RNXKSYN9"></Script>
+        {/* <Script async src="https://www.googletagmanager.com/gtag/js?id=G-H6RNXKSYN9"></Script>
         <Script id="google-tag">
         {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-H6RNXKSYN9')`}
-        </Script>
+        </Script> */}
 
         </head>
             <body className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}>
