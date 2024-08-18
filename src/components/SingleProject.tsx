@@ -4,7 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-
+import handleGAClicks from '../utils/GoogleAnalytics/eventClicks'
 
 export default function Project({
     title,
@@ -24,6 +24,15 @@ export default function Project({
     });
     const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
     const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
+
+    const recordAnalyticsClick = (button_name: string, title: string) => {
+        let eventParams = {
+            project_name: title,
+            button_name: button_name,
+        }
+        handleGAClicks('project_button_click', eventParams);
+    }
 
     return (
         <motion.div
@@ -71,6 +80,7 @@ export default function Project({
                         className="bg-white px-2 py-1 text-gray-700 flex items-center text-[1rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/100"
                         href={githubRepo}
                         target='_blank' 
+                        onClick={() => {recordAnalyticsClick('Github Repo', title)}}
                     >
                         Github Repo
                     </a>
@@ -81,6 +91,7 @@ export default function Project({
                         className="bg-white px-2 py-1 text-gray-700 flex items-center text-[1rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/100"
                         href={liveDemo}
                         target='_blank'
+                        onClick={() => {recordAnalyticsClick('Live Demo', title)}}
                     >
                         Live Demo
                     </a>
