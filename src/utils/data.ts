@@ -6,14 +6,12 @@ import { LuGraduationCap } from "react-icons/lu";
 // IMAGES
 import udemyClone from "@/public/images/udemyclone.png"
 import frontendChallenge1 from "@/public/images/frontEndChallenge1.png"
-import corpcommentImg from "@/public/images/corpcomment.png";
-import rmtdevImg from "@/public/images/rmtdev.png";
-import wordanalyticsImg from "@/public/images/wordanalytics.png";
 import dentalxpImg from "@/public/images/dentalXP.png"
 import dpsImage from "@/public/images/dentalProductShopper.png"
 import dentalLearningImg from "@/public/images/dentalLearning.png"
 import imsCmsImg from "@/public/images/imsContentManagement.png"
 import quickExpense from "@/public/images/quickExpenseTracker.png"
+import landingPage from "@/public/images/landingPageTemplate.png"
 
 export const links = [
     {
@@ -80,10 +78,60 @@ export const fullstackProjectsData = [
         liveDemo: 'https://nextjs-quick-expense-tracker.vercel.app/',
         githubRepo:'https://github.com/alvaroormeno/nextjs-expense-tracker'
     },
+
+
+
+    {
+        title: "DentalXP",
+        description: "Leading provider of online dental education, offering a wide range of courses and programs to dental professionals worldwide.",
+        bullets: [
+            'Redeveloped and redesigned platform from scratch enhancing design, performance, scalability for larger user and education material base',
+            'Implemented new payment processor architecture while migrating old accounts.',
+            'Developed fellowship section to offer online CE courses through videos, lectures, quizzes and final exams.'
+        ],
+        tags: ["React", "Next.JS", "TypeScript", "CSS", "Prisma", "Stripe", "SendGrid"],
+        imageUrl: dentalxpImg,
+        liveDemo: 'https://www.dentalxp.com',
+        githubRepo:''
+    },
+    {
+        title: "IMS Content Management System",
+        description:  "Full Content Management System for all IMS platforms, DXP, DPS, DL",
+        bullets: [
+            'Implemented new content management section for DentalXP',
+            'Updated application for all platform new needs',
+        ],
+        tags: ["React", "Next.JS", "CSS", "MUI", "Redux", "Axios", "JWT", ],
+        imageUrl: imsCmsImg,
+        liveDemo: '',
+        githubRepo:''
+    },
+    {
+        title: "Dental Product Shopper",
+        description:  "Leading provider of practical, unbiased product information. Our peer to peer product reviews help you select the best products for your practice.",
+        bullets: [
+            'Tested and analyzed communication between client and server to efficiently improve loading times.',
+            'Implemented additional informative sections such as forums and newsfeed.',
+            'Maintained content management system with new additions.'
+        ],
+        tags: ["React", "Next.JS", "CSS", "Redux", "Axios",  ],
+        imageUrl: dpsImage,
+        liveDemo: 'https://www.dentalproductshopper.com',
+        githubRepo:''
+    },
 ] 
 
 
 export const designProjectsData = [
+    {
+        title: "Landing Page Template",
+        description: "A simple but engaging SAAS Landing Page including hero, pricing, testimonials and call to action sections.",
+        bullets: [],
+        tags: ["React", "Next.js", "Tailwind", "Framer Motion"],
+        imageUrl: landingPage,
+        liveDemo: 'https://nextjs-landing-page-project.vercel.app/',
+        githubRepo:'https://github.com/alvaroormeno/nextjs-landing-page-project'
+    },
     {
         title: "Udemy Clone Landing Page",
         description: "A responsive clone of Udemy main landing page. Uses JSON data file to populate information of courses.",
