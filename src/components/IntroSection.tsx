@@ -111,7 +111,7 @@ export default function IntroSection() {
                     <h1>Welcome!</h1>
                     <h1>My name is <span className="font-bold">Alvaro Ormeno</span>.</h1>
                     <h1>I'm a <span className="font-bold">Full-Stack Developer</span></h1>
-                    <h1>with <span className="font-bold">2+ years</span>  of work experience.</h1>
+                    <h1>with <span className="font-bold">3 years</span>  of work experience.</h1>
                     <h1>My focus is <span className="font-bold">React + Next.Js</span> </h1>
                 </motion.div>
 

@@ -254,3 +254,39 @@ export const skillsData = [
     "Axios",
 
 ] as const;
+
+
+export const certificationsData = [
+    {
+        name: 'Python for Everybody Specialization',
+        description: 'A specialization that teaches the fundamentals of programming using Python.',
+        issuingOrganization: "University of Michigan",
+        skills: [
+            'Python',
+            'Data Structures',
+            'Databases',
+            'Web Scraping',
+            'Data Analysis',
+            'XML',
+            'JSON',
+            "BeautifulSoup",
+        ],
+        url: 'https://www.coursera.org/account/accomplishments/specialization/OSDPAHN9GNTZ'
+
+    },
+    {
+        name: 'React Basic',
+        description: 'React Basic fundamentals.',
+        issuingOrganization: "Hacker Rank",
+        skills: [
+            'Routing',
+            'Rendering',
+            'State Management',
+            'Event handling',
+            'Javascript',
+        ],
+        url: 'https://www.hackerrank.com/certificates/cfc3c181f40d'
+
+    },
+
+]
