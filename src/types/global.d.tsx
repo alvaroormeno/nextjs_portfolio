@@ -8,7 +8,7 @@ declare global {
 
     type SectionName = (typeof links)[number]["name"];
 
-    type ProjectsType = 'fullstack' | 'frontend' | 'workProjects'
+    type ProjectsType = 'fullstack' | 'frontend' | 'workProjects' | 'python';
 
     type SingleExpProjectObj = {
         title: string;
@@ -20,5 +20,4 @@ declare global {
         githubRepo: string;
     }
     
-
 }

@@ -3,7 +3,7 @@
 import React, {useEffect, useState} from "react";
 import SectionHeader from "./SectionHeader";
 import Project from "./SingleProject";
-import { fullstackProjectsData, designProjectsData, workProjectsData } from "../utils/data";
+import { fullstackProjectsData, designProjectsData, workProjectsData, pythonProjectsData } from "../utils/data";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "../contexts/ActiveSectionContext";
 import { useSectionInView } from "../utils/hooks";
@@ -24,6 +24,8 @@ function ProjectSection() {
             setProjectsToMap(designProjectsData)
         } else if (projectType === 'workProjects') {
             setProjectsToMap(workProjectsData)
+        } else if (projectType === 'python') {
+            setProjectsToMap(pythonProjectsData)
         }
     }, [projectType])
 
@@ -57,6 +59,12 @@ function ProjectSection() {
                     onClick={() => setProjectType('frontend')}
                 >
                     Front End
+                </p>
+                <p 
+                    className={projectType === 'python' ? "bg-black/[0.7] px-3 py-1 text-[0.9rem] uppercase tracking-wider text-white rounded-full dark:text-white/70 cursor-pointer " : "text-[0.9rem] uppercase tracking-wider cursor-pointer"}
+                    onClick={() => setProjectType('python')}
+                >
+                    Python
                 </p>
             </div>
             <div>

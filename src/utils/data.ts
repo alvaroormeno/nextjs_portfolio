@@ -12,6 +12,7 @@ import dentalLearningImg from "@/public/images/dentalLearning.png"
 import imsCmsImg from "@/public/images/imsContentManagement.png"
 import quickExpense from "@/public/images/quickExpenseTracker.png"
 import landingPage from "@/public/images/landingPageTemplate.png"
+import monetPython from "@/public/images/monet-preview.png"
 
 export const links = [
     {
@@ -63,6 +64,24 @@ export const experiencesData = [
         date: "2022 - present",
     },
 ] as const;
+
+
+
+export const pythonProjectsData = [
+    {
+        title: "Monet Artwork Visualizer",
+        description: "A Python GUI application that displays a paginated gallery of Monet artworks from the Art Institute of Chicago's public API.",
+        bullets: [
+            'Built with Tkinter, Pillow, and Requests libraries',
+            'Offers a scrollable view of artwork cards, each showing image, title, medium, dimensions, and description',
+            'Data is fetched from the Art Institute of Chicago API',
+        ],
+        tags: ["Pythin", "Tkinter", "Pillow", "Requests"],
+        imageUrl: monetPython,
+        liveDemo: '',
+        githubRepo:'https://github.com/alvaroormeno/python-data-visualization-/blob/main/README.md'
+    },
+];
 
 export const fullstackProjectsData = [
     {
@@ -215,6 +234,7 @@ export const skillsData = [
     "React",
     "TypeScript",
     "Next.js",
+    "Python",
     "Node.js",
     "Git",
     "Prisma",
